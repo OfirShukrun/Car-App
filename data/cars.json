@@ -1,0 +1,25 @@
+[{
+    "name": "Mazda",
+    "color": "Green",
+    "price": 50000,
+    "available": true,
+    "thumb": "/img/mazda.png"
+}, {
+    "name": "Volkswagen",
+    "color": "Gray",
+    "price": 30000,
+    "available": true,
+    "thumb": "/img/volk.png"
+}, {
+    "name": "Hyundai",
+    "color": "Blue",
+    "price": 80000,
+    "available": true,
+    "thumb": "img/htundai.png"
+}, {
+    "name": "Honda",
+    "color": "Red",
+    "price": 100000,
+    "available": true,
+    "thumb": "img/honda.png"
+}]

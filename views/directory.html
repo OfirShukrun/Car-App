@@ -1,0 +1,23 @@
+<div class="content">
+    <div ng-controller="carController">
+        <button ng-click="order = 'name'">Order by Name</button>
+        <button ng-click="order = 'color'">Order by Color</button>
+        <button ng-click="order = 'price'">Order by Price</button>
+        <input type="text" ng-model="search" placeholder="Search for a Car" />
+        <ul id="car-list">
+            <li ng-repeat="car in cars | orderBy: order | filter:search" ng-show="car.available">
+                <img ng-src="{{car.thumb}}" style="margin: -12px 10px 0 0; width: 50px; float: left" ng-show="car.thumb" />
+                <h3>{{car.name}} - {{car.price | currency}}</h3>
+                <div class="remove " ng-click="removeCar(car) ">x</div>
+                <span class="belt " style="background: {{car.color}} ">{{car.color}} color</span>
+            </li>
+        </ul>
+        <form ng-submit="addCar() ">
+            <input type="text " placeholder="Name " ng-model="newCar.name ">
+            <input type="text " placeholder="Color " ng-model="newCar.color ">
+            <input type="text " placeholder="Price " ng-model="newCar.price ">
+            <input type="submit" value="Add new car">
+        </form>
+        <a href="" ng-click="removeAll()">Remove all cars</a>
+    </div>
+</div>
